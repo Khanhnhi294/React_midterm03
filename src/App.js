@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import axios from "axios";
+import { useEffect, useState } from "react"; 
+import "./App.css";
+import Navbar from "./components/layout/Navbar";
+// import Users from "./components/users/User"; 
+import Search from "./components/users/Search";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <div className="App">
+  <Navbar />
+  <div className="container">
+  <h1>GitHub Users Data</h1>
+  <Search />
+  </div>
+  </div>
   );
-}
-
-export default App;
+ };
+ export default App;
