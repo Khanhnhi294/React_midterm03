@@ -6,18 +6,19 @@ import Navbar from "./components/layout/Navbar";
 import Search from "./components/users/Search";
 
 const App = () => {
-  return (
-  <div className="App">
-  <Router>
-  <Navbar />
-  <div className="container">
-  <h1>GitHub Users Data</h1>
-  <Switch>
-  <Route exact path="/" component={Search} />
-  </Switch>
-  </div>
-  </Router>
-  </div>
-  );
- };
+   return (
+   <div className="App">
+   <Router>
+   <Navbar />
+   <div className="container">
+   <Switch>
+   <Route exact path="/" component={Search} />
+   <Route exact path="/about" component={About} />
+   <Route path="/*" component={NotFound}></Route>
+   </Switch>
+   </div>
+   </Router>
+   </div>
+   );
+  };
  export default App;
