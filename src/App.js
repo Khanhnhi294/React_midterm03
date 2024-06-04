@@ -1,24 +1,16 @@
-import axios from "axios";
-import { useEffect, useState } from "react"; 
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
+import Home from "./components/layout/Home";
 import Navbar from "./components/layout/Navbar";
-// import Users from "./components/users/User"; 
-import Search from "./components/users/Search";
-
 const App = () => {
-   return (
-   <div className="App">
-   <Router>
-   <Navbar />
-   <div className="container">
-   <Switch>
-   <Route exact path="/" component={Search} />
-   <Route exact path="/about" component={About} />
-   <Route path="/*" component={NotFound}></Route>
-   </Switch>
-   </div>
-   </Router>
-   </div>
-   );
-  };
- export default App;
+ return (
+ <div className="App">
+ <Router>
+ <Navbar />
+ <Home />
+ </Router>
+ </div>
+ );
+};
+export default App;
