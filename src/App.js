@@ -8,11 +8,15 @@ import Search from "./components/users/Search";
 const App = () => {
   return (
   <div className="App">
+  <Router>
   <Navbar />
   <div className="container">
   <h1>GitHub Users Data</h1>
-  <Search />
+  <Switch>
+  <Route exact path="/" component={Search} />
+  </Switch>
   </div>
+  </Router>
   </div>
   );
  };
