@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-const UserItem = (props) => {
-  const { login, avatar_url, html_url } = props.user;
+const RepoItem = (props) => {
+  const { login, avatar_url, html_url } = props.repo;
   return (
     <div className="card text-center">
       <img
