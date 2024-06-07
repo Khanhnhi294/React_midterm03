@@ -19,4 +19,4 @@ const RepoItem = (props) => {
     </div>
   );
 };
-export default UserItem;
+export default RepoItem;
