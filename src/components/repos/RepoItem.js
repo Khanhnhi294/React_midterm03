@@ -1,22 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
-const RepoItem = (props) => {
-  const { login, avatar_url, html_url } = props.repo;
+import PropTypes from "prop-types";
+
+const RepoItem = ({ repo }) => {
   return (
-    <div className="card text-center">
-      <img
-        src={avatar_url}
-        alt=""
-        className="round-img"
-        style={{ width: "60px" }}
-      />
-      <h3>{login}</h3>
-      <div>
-        <Link to={`/user/${login}`} className="btn btn-dark btn-sm my-1">
-          More
-        </Link>
-      </div>
+    <div className="card">
+      <h3>
+        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+          {repo.name}
+        </a>
+      </h3>
+      <p>{repo.description}</p>
+      <div className="badge badge-dark">Stars: {repo.stargazers_count}</div>
+      <div className="badge badge-primary">Watchers: {repo.watchers_count}</div>
+      <div className="badge badge-success">Forks: {repo.forks_count}</div>
     </div>
   );
 };
+
+RepoItem.propTypes = {
+  repo: PropTypes.object.isRequired,
+};
+
 export default RepoItem;
