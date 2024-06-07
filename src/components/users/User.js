@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { Fragment, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Repos from "../repos/Repos";
+import Repos from "../repos/Repos";  // Ensure the path is correct
 
 const User = () => {
   const { id } = useParams();

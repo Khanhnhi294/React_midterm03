@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RepoItem from "./RepoItem";
+import RepoItem from "./RepoItem";  // Ensure the path is correct
 
 const Repos = ({ repos }) => {
   return (

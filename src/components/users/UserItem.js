@@ -1,7 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
+
 const UserItem = (props) => {
   const { login, avatar_url, html_url } = props.user;
+
   return (
     <div className="card text-center">
       <img
@@ -19,4 +21,5 @@ const UserItem = (props) => {
     </div>
   );
 };
+
 export default UserItem;
