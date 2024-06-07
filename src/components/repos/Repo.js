@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RepoItem from "./RepoItem";  // Ensure the path is correct
+import RepoItem from "./RepoItem";  
 
 const Repos = ({ repos }) => {
   return (
     <div>
       <h2>Repositories</h2>
-      {repos.map((repo) => (
+      {repos?.map((repo) => (
         <RepoItem key={repo.id} repo={repo} />
       ))}
     </div>
