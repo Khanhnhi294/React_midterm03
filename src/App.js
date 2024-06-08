@@ -1,19 +1,23 @@
-import axios from "axios";
-import { useEffect, useState } from "react"; 
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
+import Home from "./components/layout/Home";
 import Navbar from "./components/layout/Navbar";
-// import Users from "./components/users/User"; 
-import Search from "./components/users/Search";
-
+import { TextProvider } from './components/TextContext';
+import { ThemeProvider } from './components/ThemeContext';
 const App = () => {
   return (
-  <div className="App">
-  <Navbar />
-  <div className="container">
-  <h1>GitHub Users Data</h1>
-  <Search />
-  </div>
-  </div>
+    <ThemeProvider>
+    <TextProvider>
+       <div className="App">
+          <Router>
+             <Navbar />
+             <Home />
+          </Router>
+       </div>
+    </TextProvider>
+ </ThemeProvider>
+
   );
- };
- export default App;
+};
+export default App;
