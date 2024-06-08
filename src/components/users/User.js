@@ -2,11 +2,13 @@ import axios from "axios";
 import React, { Fragment, useEffect, useState, useContext } from "react";
 import { Link, useParams, useHistory } from "react-router-dom";
 import Repos from "../repos/Repo";
+import { TextContext } from "../TextContext";
 
 const User = () => {
     const { id } = useParams();
     const [user, setUser] = useState({});
     const [repos, setRepos] = useState([]);
+    const { currentSearch, setCurrentSearch } = useContext(TextContext);
    const history = useHistory()
     const getUser = async (userName) => {
         try {
