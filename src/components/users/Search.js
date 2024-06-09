@@ -8,7 +8,6 @@ const Search = () => {
     const [text, setText] = useState('');
     const [users, setUsers] = useState([]);
     const { currentSearch, setCurrentSearch } = useContext(TextContext);
-    const { theme, setTheme } = useContext(ThemeContext);
     const clearRef = useRef()
     useEffect(() => {
       if(currentSearch){
